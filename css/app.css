@@ -116,7 +116,6 @@ h1 {
     background: #02ccba;
     color: #ffffff;
     border-radius: 8px;
-    cursor: pointer;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -131,4 +130,5 @@ h1 {
     height: 30px;
     border-radius: 8px;
     padding: 5px;
+    cursor: pointer;
 }
