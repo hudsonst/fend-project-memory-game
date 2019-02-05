@@ -52,13 +52,15 @@ let moves = 0;
 let lastCard = '';
 let time = 0;
 let starCount = 3;
+let cardArray = ['default']; //Set to dummy value 
+let displayTimeInt = 0;
 
-function respondToTheClick(event) {
+
+function startGame(event) {
     const card = event.target;
     showSymbol(card);
     compareCards(card);
     incrementMoves();
-    startTimer();
 }
 
 function showSymbol(card) {
@@ -137,15 +139,24 @@ function countMatches() {
 
 function startTimer() {
     time = setInterval(function() {
-        time++;
+        ++time;
     }, 1000);
+    displayTimer();
+}
+
+function displayTimer(){
+    const displayTime = document.querySelector('.displayTime');
+    displayTimeInt = setInterval(display, 1000);
+    function display() {
+        displayTime.textContent = time + ' seconds';
+    }
 }
 
 function stopTimer() {
     clearTimeout(time);
+    clearTimeout(displayTimeInt);
 }
 
+deck.addEventListener('click', startTimer, { once: true });
 
-
-let cardArray = ['default'];
-deck.addEventListener('click', respondToTheClick);
+deck.addEventListener('click', startGame);
