@@ -107,3 +107,28 @@ h1 {
     float: right;
     cursor: pointer;
 }
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    height: 210px;
+    width: 300px;
+    background: #02ccba;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    z-index: 9999;
+}
+
+#modalButton { 
+    background-color: white;
+    color: #02ccba;
+    height: 30px;
+    border-radius: 8px;
+    padding: 5px;
+}
