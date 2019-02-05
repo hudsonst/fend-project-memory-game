@@ -9,7 +9,7 @@
 
 This is an interactive version of the classic "Concentration" card game.
 
-THe objective is to match all cards as quickly as possible with as few moves as possible.
+The objective is to match all cards as quickly as possible with as few moves as possible.
 
 ## Instructions
 
